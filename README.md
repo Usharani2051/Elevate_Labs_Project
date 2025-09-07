@@ -144,6 +144,7 @@ Average Revenue per Customer = DIVIDE(
 )
 
 -- **Risk Metrics**
+
 Product Return % = DIVIDE(
     CALCULATE(
         [Returned Orders],
@@ -253,7 +254,7 @@ Create pages with different focus areas:
 
 📊 **Dashboard Pages**
 
-🔹** 1. Overview Page**
+🔹**1. Overview Page**
 
 **Purpose:** Provides a high-level summary of the e-commerce performance with key KPIs, revenue trends, category performance, and top 10 products.
 
