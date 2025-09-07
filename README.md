@@ -55,7 +55,7 @@ The model follows a Star Schema:
 
 - Returns → Orders (OrderID)
 
-📐** DAX Measures**
+📐 **DAX Measures**
 
 -- **Orders & Revenue**
 
@@ -315,7 +315,7 @@ KPI Cards:
 
 📌 **Takeaway:** Certain products (e.g., Paper Ream, Jeans) drive a disproportionate share of returns. Categories like Bags & Accessories and Beauty & Personal Care are highest contributors to lost revenue.
 
-🔹** 3. Customer & Seller Analysis Page**
+🔹**3. Customer & Seller Analysis Page**
 
 **Purpose:** Identifies which customers and sellers are most responsible for returns, and analyzes return behavior.
 
@@ -355,7 +355,7 @@ Seller Metrics:
 
 📌 **Takeaway:** A small group of repeat customers (5–10 people) drive many returns. Sellers like Johnson PLC have high return volumes, suggesting product quality/service issues.
 
-🔹** 4. Risk Score Analysis Page**
+🔹**4. Risk Score Analysis Page**
 
 **Purpose:** Predicts and highlights high-risk products and categories most likely to be returned.
 
@@ -393,7 +393,7 @@ KPI Cards:
 
 📌** Takeaway:** Products with long delivery times (lead days) and short return windows (return days) pose the highest risk. Certain categories (Clothing, Bags & Accessories) are priority areas for intervention.
 
-🔹** 5. Geographical Analysis Page**
+🔹**5. Geographical Analysis Page**
 
 **Purpose:** Visualizes returns across regions to detect geographic hotspots.
 
