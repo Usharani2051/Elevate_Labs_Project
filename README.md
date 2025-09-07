@@ -2,7 +2,7 @@
 
 📊 **E-commerce Return Rate Reduction Analysis**
 
-📌** Project Overview**
+📌**Project Overview**
 
 Product returns are a major challenge in e-commerce, reducing profitability and impacting customer satisfaction.
 This project analyzes return behavior using the Online Marketplace dataset (Kaggle) and builds a Power BI Dashboard with DAX measures to:
