@@ -19,17 +19,17 @@ This project analyzes return behavior using the Online Marketplace dataset (Kagg
 
 Source: Online Marketplace Dataset (Kaggle)
 
-Files Used (Excel Format):
+Files Used:
 
-Orders.xlsx → OrderID, OrderDate, DeliveryDate, BuyerID, ProductID, SellerID, Price
+- Orders → OrderID, OrderDate, DeliveryDate, CustomerID, ProductID, SellerID, Price
 
-Returns.xlsx → OrderID, ProductID, SellerID, ReturnDate
+- Returns → OrderID, ProductID, SellerID, ReturnDate
 
-Customers.xlsx → CustomerID, CustomerName, State, City, ZipCodePrefix
+- Customers → CustomerID, CustomerName, State, City, ZipCodePrefix
 
-Products.xlsx → ProductID, ProductName, ProductCategory
+- Products → ProductID, ProductName, ProductCategory
 
-Sellers.xlsx → SellerID, SellerName
+- Sellers → SellerID, SellerName
 
 🏗️ Schema Design
 
