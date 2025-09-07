@@ -35,27 +35,28 @@ Files Used:
 
 The model follows a Star Schema:
 
-Orders (Fact Table) → PK: OrderID | FK: CustomerID, ProductID, SellerID
+- Orders (Fact Table) → FK: OrderID | FK: CustomerID, ProductID, SellerID
 
-Returns (Fact Table) → PK: (OrderID + ProductID + SellerID composite) | FK: OrderID
+- Returns (Fact Table) → PK: OrderID 
 
-Customers (Dimension) → PK: CustomerID
+- Customers (Dimension) → PK: CustomerID
 
-Products (Dimension) → PK: ProductID
+- Products (Dimension) → PK: ProductID
 
-Sellers (Dimension) → PK: SellerID
+- Sellers (Dimension) → PK: SellerID
 
 📌 Relationships:
 
-Orders → Customers (CustomerID)
+- Orders → Customers (CustomerID)
 
-Orders → Products (ProductID)
+- Orders → Products (ProductID)
 
-Orders → Sellers (SellerID)
+- Orders → Sellers (SellerID)
 
-Returns → Orders (OrderID)
+- Returns → Orders (OrderID)
 
 📐 DAX Measures
+
 -- Orders & Revenue
 Total Orders = COUNTROWS(Orders)
 
@@ -84,7 +85,9 @@ Returned Revenue = SUMX(
 
 Net Revenue = [Sales Revenue] - [Returned Revenue]
 
+
 -- Time Metrics
+
 Avg Lead Days = AVERAGEX(
     Orders,
     DATEDIFF(Orders[OrderDate], Orders[DeliveryDate], DAY)
@@ -116,7 +119,9 @@ Previous Month Return = CALCULATE(
     DATEADD(Orders[OrderDate], -1, MONTH)
 )
 
+
 -- Customer Metrics
+
 Total Customers = DISTINCTCOUNT(Customer[CustomerID])
 
 Customers with Returns = 
@@ -162,6 +167,7 @@ Seller Return % = DIVIDE(
     0
 )
 
+
 Return Risk Score = 
 VAR p = [Product Return %]
 VAR s = [Seller Return %]
@@ -178,32 +184,34 @@ Products with High Risk = COUNTROWS (
     )
 )
 
+
 ⚙️ Implementation Steps
+
 1. Import Data into Power BI
 
-Open Power BI Desktop.
+- Open Power BI Desktop.
 
-Go to Home → Get Data → Excel.
+- Go to Home → Get Data → Excel.
 
-Import the following files:
+- Import the following files:
 
-Orders.xlsx
+Orders
 
-Returns.xlsx
+Returns
 
-Customers.xlsx
+Customers
 
-Products.xlsx
+Products
 
-Sellers.xlsx
+Sellers
 
-Load them into the Data Model.
+- Load them into the Data Model.
 
 2. Build Relationships (Schema)
 
-Open Model View.
+- Open Model View.
 
-Connect:
+- Connect:
 
 Customers[CustomerID] → Orders[CustomerID]
 
@@ -213,7 +221,7 @@ Sellers[SellerID] → Orders[SellerID]
 
 Orders[OrderID] → Returns[OrderID]
 
-Ensure 1-to-Many relationships are correctly set (1 on dimension side, * on fact side).
+- Ensure 1-to-Many relationships are correctly set (1 on dimension side, * on fact side).
 
 3. Create DAX Measures
 
